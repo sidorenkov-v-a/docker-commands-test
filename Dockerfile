@@ -3,5 +3,5 @@ COPY . /
 
 RUN bash -c "source init_aliases.sh"
 RUN bash -c "source ~/.bashrc"
-CMD bash start.sh
+CMD bash -c "source init_aliases.sh && bash start.sh"
 
