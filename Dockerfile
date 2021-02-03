@@ -1,7 +1,7 @@
 FROM python:3.8.5
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 COPY . /
 
-RUN bash -c "source init_aliases.sh"
-RUN bash -c "source ~/.bashrc"
-CMD bash -c "source init_aliases.sh && bash start.sh"
+RUN echo 'alias hi="echo hello"' >> ~/.bashrc
 
+CMD bash
