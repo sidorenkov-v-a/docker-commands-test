@@ -4,4 +4,4 @@ COPY . /
 
 RUN echo 'alias hi="echo hello"' >> ~/.bashrc
 
-CMD bash
+CMD bash hi
